@@ -1,1 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistivo</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fa;
+            color: #333;
+        }
+
+        header {
+            background: #0d6efd;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #084298;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            color: #0d6efd;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #0d6efd;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #084298;
+        }
+
+        footer {
+            margin-top: 60px;
+            background: #212529;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ASSISTIVO</h1>
+    <p>Tecnologia para inclusão e acessibilidade</p>
+</header>
+
+<nav>
+    <a href="#">Início</a>
+    <a href="#">Recursos</a>
+    <a href="#">Sobre</a>
+    <a href="#">Contato</a>
+</nav>
+
+<section class="hero">
+    <h2>Bem-vindo ao Assistivo</h2>
+    <p>
+        Um projeto dedicado a promover acessibilidade digital,
+        tecnologia assistiva e inclusão para todos.
+    </p>
+
+    <a href="#" class="btn">Saiba Mais</a>
+</section>
+
+<footer>
+    <p>&copy; 2026 Assistivo - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
