@@ -1,1 +1,306 @@
+/* =========================================================
+   SITE ASSISTIVO - STYLE.CSS
+   Parte 1: Reset, variáveis, temas e estrutura base
+   ========================================================= */
 
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f8fc;
+    color: #222;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ---------- VARIÁVEIS ---------- */
+
+:root {
+
+    /* Cores principais */
+    --primary: #0057b8;
+    --primary-dark: #003d82;
+    --secondary: #00a896;
+    --accent: #ffb703;
+
+    /* Fundo */
+    --background: #f5f8fc;
+    --surface: #ffffff;
+
+    /* Texto */
+    --text: #222222;
+    --text-light: #555555;
+
+    /* Bordas */
+    --border: #d9e2ec;
+
+    /* Estados */
+    --success: #2e7d32;
+    --warning: #f9a825;
+    --danger: #c62828;
+
+    /* Acessibilidade */
+    --focus: #ff9800;
+
+    /* Sombras */
+    --shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+    /* Espaçamentos */
+    --radius: 12px;
+
+    --transition:
+        all .3s ease;
+}
+
+
+/* ---------- TEMA ESCURO ---------- */
+
+body.dark-mode {
+
+    --background: #121212;
+    --surface: #1e1e1e;
+
+    --text: #ffffff;
+    --text-light: #cccccc;
+
+    --border: #444;
+
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* ---------- ALTO CONTRASTE ---------- */
+
+body.high-contrast {
+
+    background: #000;
+    color: #fff;
+
+}
+
+body.high-contrast * {
+
+    border-color: #fff !important;
+
+}
+
+body.high-contrast a,
+body.high-contrast button {
+
+    background: #000;
+    color: #ffff00;
+    border: 2px solid #ffff00;
+
+}
+
+
+/* ---------- AUMENTO DE TEXTO ---------- */
+
+body.large-text {
+
+    font-size: 20px;
+
+}
+
+body.large-text h1 {
+    font-size: 3rem;
+}
+
+body.large-text p,
+body.large-text span,
+body.large-text a {
+
+    line-height: 2;
+
+}
+
+
+/* ---------- REDUÇÃO DE MOVIMENTO ---------- */
+
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+
+}
+
+
+/* ---------- ACESSIBILIDADE DO FOCO ---------- */
+
+*:focus {
+
+    outline: 3px solid var(--focus);
+    outline-offset: 4px;
+
+}
+
+
+/* ---------- CONTAINER ---------- */
+
+.container {
+
+    width: min(1200px, 90%);
+    margin: auto;
+
+}
+
+
+/* ---------- SEÇÕES ---------- */
+
+section {
+
+    padding: 80px 0;
+
+}
+
+.section-title {
+
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.section-title h2 {
+
+    font-size: 2.2rem;
+    color: var(--primary);
+
+}
+
+.section-title p {
+
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 15px auto;
+
+}
+
+
+/* ---------- BOTÕES ---------- */
+
+.btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border-radius: var(--radius);
+
+    border: none;
+
+    background: var(--primary);
+    color: white;
+
+    font-weight: bold;
+
+    transition: var(--transition);
+
+}
+
+
+.btn:hover {
+
+    background: var(--primary-dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+.btn-secondary {
+
+    background: var(--secondary);
+
+}
+
+
+.btn-warning {
+
+    background: var(--accent);
+    color: #000;
+
+}
+
+
+/* ---------- UTILITÁRIOS ---------- */
+
+.text-center {
+
+    text-align: center;
+
+}
+
+
+.hidden {
+
+    display:none;
+
+}
+
+
+.flex {
+
+    display:flex;
+
+}
+
+
+.grid {
+
+    display:grid;
+
+}
+
+
+.shadow {
+
+    box-shadow: var(--shadow);
+
+}
+
+
+.rounded {
+
+    border-radius: var(--radius);
+
+}
